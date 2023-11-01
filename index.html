@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter-Game</title>
+    <style>
+        .card {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            background-color: whitesmoke;
+            box-shadow: 0px 3px 10px 0 rgb(177, 177, 177);
+        }
+
+        .card .title {
+            font-size: 50px;
+            padding-bottom: -50px;
+        }
+
+        .card .num {
+            font-size: 55px;
+            margin-top: 0px;
+        }
+
+        .card .buttons {
+            padding: 10px 10px;
+        }
+        .buttons, .negative, 
+        .reset, .positive{
+            border-radius: 4px;
+            padding: 5px 15px;
+            font-size: 25px;
+            color: white;
+        }
+        .negative{
+            background-color: red;
+            border: 1px solid white;
+        }
+
+        .negative:hover{
+            box-shadow: 0 0 10px 0 rgb(210, 82, 92);
+        }
+
+        .reset{
+            background-color: grey;
+            border: 1px solid white;
+        }
+
+        .reset:hover{
+            box-shadow: 0 0 10px 0 rgb(176, 170, 170);
+        }
+
+        .positive{
+            background-color: green;
+            border: 1px solid white;
+        }
+
+        .positive:hover{
+            box-shadow: 0 0 10px 0 rgb(119, 214, 119);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="title">Counter</h1>
+            <h1 class="num">0</h1>
+            <div class="buttons">
+                <button onclick="negative()" class="negative">-</button>
+                <button onclick="reset()" class="reset">Reset</button>
+                <button onclick="positive()" class="positive">+</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="counter.js"></script>
+
+</html>
